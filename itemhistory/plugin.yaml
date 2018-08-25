@@ -1,0 +1,29 @@
+plugin:
+    type: system                  # plugin type (gateway, interface, protocol, system, web)
+    description:
+        de: 'Item history plugin'
+        en: 'Item history plugin'
+    maintainer: cstrassburg
+    tester: cstrassburg
+
+    documentation: https://github.com/smarthomeNG/plugins/itemhistory/README.md
+
+    version: 1.5.1                # Plugin version
+    sh_minversion: 1.4            # minimum shNG version to use this plugin
+
+    multi_instance: False          # plugin supports multi instance
+    classname: ItemHistory           # class containing the plugin
+
+parameters:
+    history_size:
+        type: int
+        description:
+          de: 'Globale Definition für die Anzahl der history Einträge eines Items.'
+          en: 'Global definition for the history size of an item.'
+item_attributes:
+    history:
+        type: int
+        default: 5
+        description:
+            de: 'Aktiviert die history Einträge eines Items uns setzt die Anzahl dieser fest. Überschreibt die globale Konfiguratgion wenn es eine Zahl ist.'
+            en: 'Activates Item history logging and defines the size of the history. Overwrites global size definition if the value is a number.'
